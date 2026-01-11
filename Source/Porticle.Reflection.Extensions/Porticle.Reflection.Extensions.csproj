@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <TargetFrameworks>net10.0;net8.0;net9.0</TargetFrameworks>
+
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>Porticle.Reflection.Extensions</Title>
+        <Authors>Carsten Jendro</Authors>
+        <Description>Reflection extensions for type strings</Description>
+        <Copyright>Carsten Jendro</Copyright>
+        <PackageProjectUrl>https://github.com/Machibuse/Porticle.Reflection.Extensions</PackageProjectUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageIcon>pinky32.png</PackageIcon>
+        <RepositoryUrl>https://github.com/Machibuse/Porticle.Reflection.Extensions.git</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageReleaseNotes></PackageReleaseNotes>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <DevelopmentDependency>true</DevelopmentDependency>
+        <Version>1.4.113</Version>
+        <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
+        <TargetFrameworks>net10.0;net9.0;net8.0</TargetFrameworks>
+        <PackageReadmeFile>readme.md</PackageReadmeFile>
+        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="pinky32.png" Pack="True" PackagePath="/"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\..\readme.md" Pack="true" PackagePath="\"/>
+    </ItemGroup>
+
+</Project>
