@@ -31,6 +31,7 @@ BEGIN {
     in_unreleased = 0
     unreleased_content = ""
     header_printed = 0
+    version_link_pattern = "^\\[" version "\\]:"
 }
 
 # Print everything before [Unreleased]
@@ -66,8 +67,8 @@ in_unreleased == 1 {
     next
 }
 
-# Skip old version link if it matches our new version (shouldn't happen, but just in case)
-$0 ~ "^\\[" version "\\]:" {
+# Skip old version link if it exists
+/^\[/ && index($0, "[" version "]:") == 1 {
     next
 }
 
