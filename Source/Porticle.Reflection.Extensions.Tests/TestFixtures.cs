@@ -62,6 +62,7 @@ public static class TestFixtures
     /// <summary>
     /// Test class with various event configurations.
     /// </summary>
+#pragma warning disable CS0067 // Event is never used - events are accessed via reflection in tests
     public class EventsClass
     {
         // Standard EventHandler
@@ -88,6 +89,7 @@ public static class TestFixtures
         public event Func<int>? FuncIntEvent;
         public event Func<string?>? FuncNullableStringEvent;
     }
+#pragma warning restore CS0067
 
     /// <summary>
     /// Helper methods to reduce test code duplication.

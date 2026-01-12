@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(dotnet:*)",
-      "Bash(del ReflectionExtensions.TestsUnitTest1.cs)"
+      "Bash(del ReflectionExtensions.TestsUnitTest1.cs)",
+      "WebFetch(domain:github.com)"
     ]
   }
 }
