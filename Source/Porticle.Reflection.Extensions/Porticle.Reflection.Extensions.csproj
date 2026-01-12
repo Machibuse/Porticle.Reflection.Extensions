@@ -3,22 +3,30 @@
     <PropertyGroup>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <TargetFrameworks>net10.0;net8.0;net9.0</TargetFrameworks>
+        <TargetFrameworks>net10.0;net9.0;net8.0</TargetFrameworks>
+        <AnalysisLevel>latest</AnalysisLevel>
 
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
         <Title>Porticle.Reflection.Extensions</Title>
         <Authors>Carsten Jendro</Authors>
-        <Description>Reflection extensions for type strings</Description>
-        <Copyright>Carsten Jendro</Copyright>
+        <Description>A .NET library that converts reflection types (PropertyInfo, ParameterInfo, FieldInfo, EventInfo) into human-readable type strings. Handles nullable reference types, generics, arrays, and C# type aliases with ease.</Description>
+        <Copyright>Copyright (c) 2026 Carsten Jendro</Copyright>
         <PackageProjectUrl>https://github.com/Machibuse/Porticle.Reflection.Extensions</PackageProjectUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageIcon>pinky32.png</PackageIcon>
+        <PackageTags>reflection;types;nullable;generics;csharp;dotnet;type-conversion;metadata</PackageTags>
         <RepositoryUrl>https://github.com/Machibuse/Porticle.Reflection.Extensions.git</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
-        <PackageReleaseNotes></PackageReleaseNotes>
-        <Version>0.0.1</Version>
-        <TargetFrameworks>net10.0;net9.0;net8.0</TargetFrameworks>
+        <PackageReleaseNotes>See https://github.com/Machibuse/Porticle.Reflection.Extensions/releases for release notes</PackageReleaseNotes>
         <PackageReadmeFile>readme.md</PackageReadmeFile>
+        <Version>0.0.1</Version>
+
+        <!-- SourceLink for better debugging experience -->
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <DebugType>embedded</DebugType>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     </PropertyGroup>
 
     <ItemGroup>
@@ -26,7 +34,11 @@
     </ItemGroup>
 
     <ItemGroup>
-        <None Include="..\..\readme.md" Pack="true" PackagePath="\"/>
+        <None Include="..\..\README.md" Pack="true" PackagePath="/"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All"/>
     </ItemGroup>
 
 </Project>

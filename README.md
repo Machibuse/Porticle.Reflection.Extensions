@@ -2,7 +2,9 @@
 
 [![NuGet Version](https://img.shields.io/nuget/v/Porticle.Reflection.Extensions)](https://www.nuget.org/packages/Porticle.Reflection.Extensions)
 [![NuGet Downloads](https://img.shields.io/nuget/dt/Porticle.Reflection.Extensions)](https://www.nuget.org/packages/Porticle.Reflection.Extensions)
-[![Build](https://github.com/Machibuse/Porticle.Reflection.Extensions/actions/workflows/release.yaml/badge.svg)](https://github.com/Machibuse/Porticle.Reflection.Extensions/actions)
+[![Build and Test](https://github.com/Machibuse/Porticle.Reflection.Extensions/actions/workflows/build.yaml/badge.svg)](https://github.com/Machibuse/Porticle.Reflection.Extensions/actions/workflows/build.yaml)
+[![Release](https://github.com/Machibuse/Porticle.Reflection.Extensions/actions/workflows/release.yaml/badge.svg)](https://github.com/Machibuse/Porticle.Reflection.Extensions/actions/workflows/release.yaml)
+[![codecov](https://codecov.io/gh/Machibuse/Porticle.Reflection.Extensions/branch/main/graph/badge.svg)](https://codecov.io/gh/Machibuse/Porticle.Reflection.Extensions)
 [![License](https://img.shields.io/github/license/Machibuse/Porticle.Reflection.Extensions)](https://github.com/Machibuse/Porticle.Reflection.Extensions/blob/main/LICENSE)
 
 ## Overview
@@ -191,5 +193,52 @@ Note: Nullable **value types** (like `List<int?>`) work correctly with `typeof()
 - .NET 9.0
 - .NET 8.0
 
+## Performance
+
+The library is optimized for performance with:
+- **ThreadLocal NullabilityInfoContext**: Reuses context instances per thread to avoid repeated allocations
+- **Dictionary-based type aliases**: O(1) lookup for C# type aliases instead of linear if-chains
+- **StringBuilder for arrays**: Efficient string building for complex array types
+- **Minimal allocations**: Recursive implementation minimizes unnecessary object creation
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+
+### Development Setup
+
+1. Clone the repository
+2. Ensure you have .NET 8.0, 9.0, or 10.0 SDK installed
+3. Run `dotnet restore` in the `Source` directory
+4. Run `dotnet build` to build the project
+5. Run `dotnet test` to run all tests
+
+### Code Style
+
+This project uses an `.editorconfig` file to maintain consistent code style. Please ensure your IDE respects these settings.
+
+### Running Tests
+
+```bash
+# Run all tests
+dotnet test
+
+# Run with code coverage
+dotnet test --collect:"XPlat Code Coverage"
+
+# Run a specific test
+dotnet test --filter "FullyQualifiedName~ToReadableTypeString_IntType"
+```
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for a list of changes in each version.
+
 ## License
-MIT
+
+MIT License - see [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Built with ❤️ using .NET
+- Inspired by the need for better reflection type string formatting in .NET applications

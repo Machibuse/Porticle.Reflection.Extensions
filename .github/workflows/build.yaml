@@ -1,0 +1,44 @@
+name: Build and Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dotnet: ['8.0.x', '9.0.x', '10.0.x']
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up .NET ${{ matrix.dotnet }}
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: ${{ matrix.dotnet }}
+
+      - name: Restore dependencies
+        run: dotnet restore Source/Porticle.Reflection.sln
+
+      - name: Build project
+        run: dotnet build Source/Porticle.Reflection.sln --configuration Release --no-restore
+
+      - name: Run tests
+        run: dotnet test Source/Porticle.Reflection.Extensions.Tests/Porticle.Reflection.Extensions.Tests.csproj --configuration Release --no-build --verbosity normal
+
+      - name: Run tests with code coverage
+        run: dotnet test Source/Porticle.Reflection.Extensions.Tests/Porticle.Reflection.Extensions.Tests.csproj --configuration Release --no-build --collect:"XPlat Code Coverage" --results-directory ./coverage
+
+      - name: Upload coverage reports to Codecov
+        if: matrix.dotnet == '10.0.x'
+        uses: codecov/codecov-action@v4
+        with:
+          files: ./coverage/**/coverage.cobertura.xml
+          fail_ci_if_error: false
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
