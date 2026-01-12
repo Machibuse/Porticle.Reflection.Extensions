@@ -3,7 +3,9 @@
     "allow": [
       "Bash(dotnet:*)",
       "Bash(del ReflectionExtensions.TestsUnitTest1.cs)",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "Bash(unzip:*)",
+      "Bash(ls:*)"
     ]
   }
 }

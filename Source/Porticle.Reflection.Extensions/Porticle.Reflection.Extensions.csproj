@@ -16,14 +16,9 @@
         <RepositoryUrl>https://github.com/Machibuse/Porticle.Reflection.Extensions.git</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageReleaseNotes></PackageReleaseNotes>
-        <IncludeBuildOutput>false</IncludeBuildOutput>
-        <DevelopmentDependency>true</DevelopmentDependency>
-        <Version>1.4.113</Version>
-        <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
+        <Version>0.0.1</Version>
         <TargetFrameworks>net10.0;net9.0;net8.0</TargetFrameworks>
         <PackageReadmeFile>readme.md</PackageReadmeFile>
-        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-
     </PropertyGroup>
 
     <ItemGroup>
