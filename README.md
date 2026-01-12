@@ -1,5 +1,10 @@
 # Porticle.Reflection.Extensions
 
+[![NuGet Version](https://img.shields.io/nuget/v/Porticle.Reflection.Extensions)](https://www.nuget.org/packages/Porticle.Reflection.Extensions)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/Porticle.Reflection.Extensions)](https://www.nuget.org/packages/Porticle.Reflection.Extensions)
+[![Build](https://github.com/Machibuse/Porticle.Reflection.Extensions/actions/workflows/release.yaml/badge.svg)](https://github.com/Machibuse/Porticle.Reflection.Extensions/actions)
+[![License](https://img.shields.io/github/license/Machibuse/Porticle.Reflection.Extensions)](https://github.com/Machibuse/Porticle.Reflection.Extensions/blob/main/LICENSE)
+
 ## Overview
 A .NET library that provides extension methods for converting .NET reflection types into human-readable type strings. This library handles complex scenarios including nullable reference types, nullable value types, generic types, arrays, and C# type aliases, making reflection output easier to read and understand.
 
