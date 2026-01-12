@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+- Fixed PackageReadmeFile reference to use correct case (README.md instead of readme.md)
+
 ## [1.0.0-beta2] - 2026-01-12
 ### Added
 - CI/CD pipeline for pull requests and main branch pushes with matrix build strategy

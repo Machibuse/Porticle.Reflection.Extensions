@@ -18,7 +18,7 @@
         <RepositoryUrl>https://github.com/Machibuse/Porticle.Reflection.Extensions.git</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageReleaseNotes>See https://github.com/Machibuse/Porticle.Reflection.Extensions/releases for release notes</PackageReleaseNotes>
-        <PackageReadmeFile>readme.md</PackageReadmeFile>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
         <Version>0.0.1</Version>
 
         <!-- SourceLink for better debugging experience -->
