@@ -7,8 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0-beta3] - 2026-01-12
 ### Fixed
 - Fixed PackageReadmeFile reference to use correct case (README.md instead of readme.md)
+
 
 ## [1.0.0-beta2] - 2026-01-12
 ### Added
@@ -59,6 +61,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Comprehensive README with usage examples
 - GitHub Actions workflow for automated releases
 
-[Unreleased]: https://github.com/Machibuse/Porticle.Reflection.Extensions/compare/v1.0.0-beta2...HEAD
+[Unreleased]: https://github.com/Machibuse/Porticle.Reflection.Extensions/compare/v1.0.0-beta3...HEAD
+[1.0.0-beta3]: https://github.com/Machibuse/Porticle.Reflection.Extensions/releases/tag/v1.0.0-beta3
 [1.0.0-beta2]: https://github.com/Machibuse/Porticle.Reflection.Extensions/releases/tag/v1.0.0-beta2
 [0.0.1]: https://github.com/Machibuse/Porticle.Reflection.Extensions/releases/tag/v0.0.1
