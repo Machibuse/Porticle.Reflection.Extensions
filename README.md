@@ -8,6 +8,18 @@
 ## Overview
 A .NET library that provides extension methods for converting .NET reflection types into human-readable type strings. This library handles complex scenarios including nullable reference types, nullable value types, generic types, arrays, and C# type aliases, making reflection output easier to read and understand.
 
+For example, when you have a Propterty of type like `IDictionary<MyClass?[][], Dictionary<object?,int?[,]?>>?`, the library is able to convert it to a readable c# type name that looks mostly exact like the normal c# type name in most cases.
+
+When you use .ToString() you will get 
+```csharp
+System.Collections.Generic.IDictionary`2[MyClass[][],System.Collections.Generic.Dictionary`2[System.Object,System.Nullable`1[System.Int32][,]]]
+```
+
+When you use this library you will get
+```csharp
+IDictionary<MyClass?[][], Dictionary<object?,int?[,]?>>?
+```
+
 ## Key Features
 The library automatically converts reflection types to readable strings:
 - Nullable reference types (`string?`, `List<string>?`)
