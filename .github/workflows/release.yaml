@@ -57,7 +57,7 @@ jobs:
         run: dotnet test Source/Porticle.Reflection.Extensions.Tests/Porticle.Reflection.Extensions.Tests.csproj --configuration Release --no-build --verbosity normal
 
       - name: Pack NuGet package
-        run: dotnet pack Source/Porticle.Reflection.Extensions/Porticle.Reflection.Extensions.csproj --configuration Release --no-build --output ./nuget --property:PackageVersion=${{ env.VERSION }}
+        run: dotnet pack Source/Porticle.Reflection.Extensions/Porticle.Reflection.Extensions.csproj --configuration Release --no-restore --output ./nuget --property:PackageVersion=${{ env.VERSION }}
 
       - name: Publish NuGet package
         run: dotnet nuget push ./nuget/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
